@@ -41,12 +41,16 @@ forEach(arr, function callback(value, indice, vector) {
 
 
 | Name | Type   | Description |
-| ------ |---------| -------------------------------------:|
-| arr  | object   | Función a ejecutar por cada elemento.   |
-| callback  | function   | El elemento actual siendo procesado en el array.   |
+| ------ |---------| ---------|
+| arr  | object   | Array con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
 | value  | string/number   | El elemento actual siendo procesado en el array.   |
 | indice  | number    | El índice del elemento actual siendo procesado en el array.   |
 | vector | object | El vector en el que forEach() esta siendo aplicado.   |
+
+| return value |
+|--------------|
+|  undefined   |
 
 ## Objeto
 ``` javascript
@@ -65,6 +69,19 @@ forEach(arr, function callback(key, value, indice, vector) {
     // tu iterador   
 });
 ```
+
+| Name | Type   | Description |
+| ------ |---------| ---------|
+| arr  | object   | Objeto con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
+| key  | string/number   | La clave actual siendo procesado en el objeto.   |
+| value  | string/number   | El valor actual siendo procesado en el objeto.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que forEach() esta siendo aplicado.   |
+
+| return value |
+|--------------|
+|  undefined   |
 
 # Map
 Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos, para iterar se reutiliza el metodo forEach.
@@ -86,6 +103,17 @@ map(arr, callback(item, indice, vector) {
     // Elemento devuelto de nuevo_array
 });
 ```
+| Name | Type   | Description |
+| ------ |---------| ---------|
+| arr  | object   | Array con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
+| item  | string/number   | El elemento actual siendo procesado en el array.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que map() esta siendo aplicado.   |
+
+| return value |
+|--------------|
+|  array  |
 
 ## Objeto
 ``` javascript
@@ -105,6 +133,19 @@ map(obj, callback(key,value, indice, vector) {
 });
 ```
 
+
+| Name | Type   | Description |
+| ------ |---------| ---------|
+| arr  | object   | Objeto con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
+| key  | string/number   | La clave actual siendo procesado en el objeto.   |
+| value  | string/number   | El valor actual siendo procesado en el objeto.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que map() esta siendo aplicado.   |
+
+| return value |
+|--------------|
+|  array   |
 
 
 
@@ -145,6 +186,17 @@ filter(arr, callback(item, indice, vector) {
     // Condición filtro
 });
 ```
+| Name | Type   | Description |
+| ------ |---------| ---------|
+| arr  | object   | Array con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
+| item  | string/number   | El elemento actual siendo procesado en el array.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que forEach() esta siendo aplicado.   |
+
+| return value |
+|--------------|
+|  array   |
 
 
 # Reduce
@@ -165,11 +217,24 @@ console.log(arr1);
 ```
 ### Sintaxis
 ``` javascript
-reduce(arrX, callback(acumulador, valActual, indice, vector) {
+reduce(arrX, callback(acumulador, value, indice, vector) {
     // Operación
 },valorInicial);
 
 ```
+| Name | Type   | Description |
+| ------ |---------| ---------|
+| arrX  | object   | Array con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
+| acumulador  | string/number   | El valor devuelto (retornado) en la llamada anterior de la función, o el valorInicial, si se proveyó. (Ver a continuación.)   |
+| value  | string/number   | El elemento actual siendo procesado en el array.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que forEach() esta siendo aplicado.   |
+| valorInicial | string/number/object | Objeto a usar como primer argumento en la primera llamada de la funcion. (Opcional)|
+
+| return value |
+|--------------|
+| single value |
 
 ## Objeto
 ``` javascript
@@ -185,10 +250,25 @@ console.log(obj1);
 
 ### Sintaxis
 ``` javascript
-reduce(obj, callback(acumulador,key, valor, indice, vector) {
+reduce(obj, callback(acumulador,key, value, indice, vector) {
     // Elemento devuelto de nuevo_array
 },valorInicial);
 ```
+
+| Name | Type   | Description |
+| ------ |---------| ---------|
+| obj  | object   | Objeto con el que se hacen las operaciones.   |
+| callback  | function   | Función a ejecutar por cada elemento   |
+| acumulador  | string/number   | El valor devuelto (retornado) en la llamada anterior de la función, o el valorInicial, si se proveyó. (Ver a continuación.)   |
+| key  | string/number   | La clave actual siendo procesado en el array.   |
+| value  | string/number   | El valor actual siendo procesado en el array.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que forEach() esta siendo aplicado.   |
+| valorInicial | string/number/object | Objeto a usar como primer argumento en la primera llamada de la funcion. (Opcional) |
+
+| return value |
+|--------------|
+| single value |
 
 
 
