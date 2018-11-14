@@ -39,6 +39,15 @@ forEach(arr, function callback(value, indice, vector) {
 });
 ```
 
+
+| Name | Type   | Description |
+| ------ |---------| -------------------------------------:|
+| arr  | object   | Función a ejecutar por cada elemento.   |
+| callback  | function   | El elemento actual siendo procesado en el array.   |
+| value  | string/number   | El elemento actual siendo procesado en el array.   |
+| indice  | number    | El índice del elemento actual siendo procesado en el array.   |
+| vector | object | El vector en el que forEach() esta siendo aplicado.   |
+
 ## Objeto
 ``` javascript
 forEach(objX, (key,value)=>{
