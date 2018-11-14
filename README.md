@@ -4,6 +4,8 @@ Este ejercicio esta basado para aprender la logica que hacen los métedos de arr
 
 Además se ha añadido funcionalidad que no proporcionan estos métodos **(Iterar objetos)**.
 
+![alt-text](ArrayMethods.png "Logo Title Text 1")
+
 ### Objetos de ejemplo
 
 ``` javascript 
@@ -54,7 +56,6 @@ forEach(arr, function callback(key, value, indice, vector) {
     // tu iterador   
 });
 ```
-
 
 # Map
 Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos, para iterar se reutiliza el metodo forEach.
