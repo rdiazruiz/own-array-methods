@@ -11,15 +11,13 @@ var obj = {
 var arr = [5, 2, 3, 4];
 
 
-module.exports = function forEach (param, fun) {
+var foreach =  function forEach (param, fun) {
     if (Array.isArray(param)) {
         forEachArray(param, fun)
     } else {
         forEachObject(param, fun)
     }
 }
-
-
 
 function forEachObject(obj, fun) {
     let arr = Object.keys(obj)
@@ -28,13 +26,13 @@ function forEachObject(obj, fun) {
     }
 };
 
-
-
 function forEachArray(arr, fun) {
     for (let i = 0; i < arr.length; i++) {
         fun(arr[i], i, arr);
     }
 };
+
+module.exports = foreach;
 
 
 
