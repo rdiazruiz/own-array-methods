@@ -4,7 +4,7 @@ Este ejercicio esta basado para aprender la logica que hacen los métedos de arr
 
 Además se ha añadido funcionalidad que no proporcionan estos métodos **(Iterar objetos)**.
 
-![alt-text](ArrayMethods.png "Esquema own array methods")
+![alt-text](ArrayMethods.png "Scheme own array methods")
 
 ### Objetos de ejemplo
 
