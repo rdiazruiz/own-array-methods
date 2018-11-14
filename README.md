@@ -99,7 +99,86 @@ map(obj, callback(key,value, indice, vector) {
 
 
 # Filter
+Crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada, para iterar se reutiliza el metodo forEach.  
+En el método filter **solo** se usan **arrays**.
+
+Para este metodo utilizaremos un array diferente:
+``` javascript 
+var arr = [{
+    id: 1,
+    nombre: "Antonio"
+},
+{
+    id: 2,
+    nombre: "Pepe"
+},
+{
+    id: 3,
+    nombre: "Antonio"
+}]
+```
+
+## Array
+
+``` javascript
+var arr1 = filter(arr, function (item) {
+    return item.nombre === "Antonio"
+});
+
+console.log(arr1)
+
+//expected output: [ { id: 1, nombre: 'Antonio' }, { id: 3, nombre: 'Antonio' } ]
+```
+### Sintaxis
+``` javascript
+filter(arr, callback(item, indice, vector) { 
+    // Condición filtro
+});
+```
+
+
 # Reduce
+
+Aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor.
+
+## Array
+
+``` javascript
+let arr1 = reduce(arrX, function (valAnterior, valActual) {
+    valAnterior += valActualKey
+    return valAnterior
+},0);
+
+console.log(arr1);
+
+//expected output: 10
+```
+### Sintaxis
+``` javascript
+reduce(arrX, callback(acumulador, valActual, indice, vector) {
+    // Operación
+},valorInicial);
+
+```
+
+## Objeto
+``` javascript
+let obj1 = reduce(arrX, function (valAnterior, valActualKey, valActualValue){
+    valAnterior.push(valActualKey)
+    return valAnterior
+},[]);
+
+console.log(obj1);
+
+//expected output: [ 'id', 'nombre', 'apellido' ]
+```
+
+### Sintaxis
+``` javascript
+reduce(obj, callback(acumulador,key, valor, indice, vector) {
+    // Elemento devuelto de nuevo_array
+},valorInicial);
+```
 
 
 
